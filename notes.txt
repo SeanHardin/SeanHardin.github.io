@@ -1,0 +1,94 @@
+<!DOCTYPE html> //html5 doctype
+<h1> 2,3,4,5,6 different headers, 1 being most important.
+<tagName>content</tagName> //content enclosed by tags, full block called element.
+  tags that don't close are elements by themselves
+block - elements placed below one another
+inline - elements placed next to each other as long as horizontal space allows it.
+<img src="path" alt="text if fails loading">
+body{
+  background-color: #faf2e4; //page changes color
+  margin: 0 15%; //0 top margin, 15% side margin?
+  font-family: sans-serif; //change font
+}
+h1{
+  text-align: center;
+  font-family: serif;
+  font-weight: normal;
+  text-transform: uppercase; //all caps now
+  border-bottom: 1px solid #57b1dc; //make solid border, change color
+  margin-top: 30px; //set top margin to 30 pixels
+}
+h2{
+  color: #d1633c; //text color
+  font-size: 1em; //size.?
+}
+<ul><li></li>...</ul> // unordered list syntax
+<ol><li></li>>...</ol> // just add numbers before items
+  start="17" - starts on 17
+<dl><dt><dd></dd></dt>...</dl> description list, like a title in dt, descriptions in dd
+<blockquote>
+<pre> - maintains white space and other formats
+<figure>stuff... <figcaption>...
+<!--[if lt IE 9]> 
+  <script src="http://html5shiv.googlecode.com/svn/
+  trunk/html5-els.js"></script> 
+<![endif]-->   //support for earlier IE html5 things.
+<section> - groups together elements, to section up the page
+<article> - self contained elements that may appear elsewhere
+<aside> - reference whole document, but not the core, think of a sidebar
+<nav> - surround lists used for navigating site
+<header> - the header of a page
+<footer> - the footer of a page
+<address>
+<em> italicize
+<strong> bold
+font-style: bold italic;
+text-decoration: line-through underline;
+font-size: 80%; in place of small
+<q> - puts quotation marks around text.
+<abbr title="full word/what acronym stands for>shortened thing</abbr>
+<cite> citing stuff
+<dfn> defining terms???
+<code> code
+<var> variable
+<samp> sample
+<kbd> user keyboard input
+<sup> superscript
+<sub> subscript
+<mark> highlights
+<time datetime="YYYY-MM-DDThh:mm:ss+-HH:SS"> year, month, day, hour, minute, second, hour and minute timezone diff.
+<data value="..."> makes text machine readable. high complication stuff.
+<ins>... or <del>... for showing there was a change in the text.
+<br>
+<bdo dir="rtl"> bidirectional override. right to left.
+<wbr> suggests to browser where a word should break when text wraps
+
+<div> generic block element
+<span> generic inline element
+  both can have classes and ids to customize with css
+
+microformats - standardized naming of classes for screenreaders to recognize
+
+special characters:
+nonbreaking space           &nbsp
+& ampersand                 &amp;
+' apostrophe                &apos;
+< less than                 &lt;
+> greater than              &gt;
+© copyright                 &copy;
+® registered trademark      &reg;
+™ trademark                 &trade;
+£ pound                     &pound;
+¥ yen                       &yen;
+€ euro                      &euro;
+– en-dash                   &ndash;
+— em-dash                   &mdash;
+‘ left curly single quote   &lsquo;
+’ right curly single quote  &rsquo;
+“ left double               &ldquo;
+” right double              &rdquo;
+• bullet point              &bull;
+... ellipses                &hellip;
+
+<img src="path" alt="text displayed if fail" width=numPixels height=numPixels> </img>
+ img tags can be enclosed by <a> to make links.
