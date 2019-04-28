@@ -92,3 +92,138 @@ nonbreaking space           &nbsp
 
 <img src="path" alt="text displayed if fail" width=numPixels height=numPixels> </img>
  img tags can be enclosed by <a> to make links.
+
+common css:
+font-family
+font-style
+font-size
+color
+background-color
+background-image
+margin
+width
+height
+padding
+float
+clear
+border
+ border-bottom:1px solid red;
+
+img:
+ float:right;  image will let text flow around it.
+ margin:0 12px;  0 top bottom, 12 left right.
+
+inheriting css:
+body{font-family:serif;} all text elements inside body inherit.
+priority: defaults, user agent settings(custom css by user), external, imported, embedded, inline, !important
+ in a tie, the last one to update wins.
+
+in style tag:
+h1,h2{color:green !important;} all h1 and h2 elements colored green
+
+font-family: font1, Verdana; sets default font to use, going down the list of browser can't find it, until empty, then uses default.
+ : serif; //means a number of serif type fonts
+ : sans-serif;
+ : monospace; //means all characters are the same width
+ : cursive; //...
+ : fantasy; /////what?
+<link href="http://fonts.googleapis.com/css?family=Marko+One" rel="stylesheet>//linking external stylesheet with a font.
+
+font-size: 150%;//50% larger than default
+ : 1.5em;//essentially the same thing.
+
+common uses of size:
+ set body{font-size: 100%}, then set headers as desired using scaling em. (headers will be same size as rest until then)
+
+font-weight: bold; //bolds
+ : normal; //removes bold
+font-style: italic;normal;
+font-variant: small-caps;normal;//all caps, scales down
+shorthand... font: style weight variant size/line-height font-family; //follow order to apply different types all at once
+ 1.5em/1.8em //font size of 1.5, line height of 1.8
+  line height is the height of the 'block' that text is in
+color:gray;
+ hex works too.
+
+MOST SPECIFIC HAS MOST PRIORITY.
+id, class, context, tag
+more specific selectors:
+ li em{color:olive;} //only changes em tags within li elements.
+ p > em{} //only changes em tags that are irectly within p tags, if inside secondary tag, they don't change.
+ h1 + p{} //only targets p tags that are directly after an h1 within the same parent.
+ h1 ~ h2{} //only targets h2 when it has same parent as h1
+ #idName{} //selects element with id
+  #id li{} //only affects list items that are children of id element.
+ p.class{} //only affects p tags with class
+ .class{} //affects all tags with class.
+   , sup //gets the super element?
+
+text-indent: 2em;25%;-35px;//2x em size, 25% of page width, negative 35 pixels.
+text-align: left;right;center;justify;
+text-decoration: none;underline;overline;line-through;blink;//blink sounds fun.
+text-transform: none;capitalize;lowercase;uppercase;//Capitalize Is This Heresy.
+letter-spacing: 8px;//8 pixels between letters
+word-spacing: 1.5em;//of normal space size i think
+text-shadow: 'horizontal offset' 'vertical offset' 'blur radius' 'color';none;
+ blur radius makes the added text more subtle, .2 em was hard to see.
+ text-shadow: 0 0 .7em purple; //puts a purple glow behind the text
+ body {background-color: thistle;}
+ h1 {
+  color: #ba9eba;
+  text-shadow: 
+      -.05em -.05em .05em white,
+      .03em .03em .05em purple;
+ }
+//makes text seem to pop out
+ body {background-color: thistle;}
+ h1 {
+  color: #ba9eba;
+  text-shadow: 
+      -.05em -.05em .05em purple,
+      .03em .03em .05em white;
+ }
+//makes text seem to sink in
+
+vertical-align
+white-space
+visibility
+text-direction: ltr;rtl;
+unicode-bidi
+font-size-adjust:
+
+
+lists:
+list-style-type: none;disc;circle;square;decimal;decimal-leading-zero;lower-alpha;upper-alpha;lower-latin;upper-latin;lower-roman;...greek;
+ upper and lower are case
+list-style-position: inside;outside; //default is outside
+list-style-image: url(/images/happy.gif);//custom bullets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
