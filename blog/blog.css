@@ -1,0 +1,49 @@
+aside{
+	float: right;
+}
+article{
+	overflow: hidden;
+	border-color: #FF0000;
+	border-style: solid;
+	border-width: 2px;
+	margin-bottom: 50px;
+	position: relative;
+}
+body{
+	background-color: #000000;
+	font-size: 1em;
+	font-family: serif; 
+	color: #FFFFFF;
+}
+h1{
+	font-size: 4em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+h2{
+	margin-left: 30px;
+	color: #CC1145;
+}
+h3{
+	margin-left: 30px;
+	color: #DD2256;
+}
+li{
+	display: inline;
+	margin: 10px;
+}
+figcaption{
+	font-style: italic;
+}
+p{
+	margin-left: 15px;
+}
+#subTitle{
+	margin-top: 0;
+	padding-top: 0;
+}
+.backToTop{
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+}
