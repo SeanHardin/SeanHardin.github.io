@@ -70,7 +70,7 @@ font-size: 80%; in place of small
 microformats - standardized naming of classes for screenreaders to recognize
 
 special characters:
-nonbreaking space           &nbsp
+nonbreaking space           &nbsp;
 & ampersand                 &amp;
 ' apostrophe                &apos;
 < less than                 &lt;
