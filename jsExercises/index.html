@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html>
+<head>
+   <meta charset="utf-8" >
+   <title>Javascript Exercises</title>
+</head>
+
+<body>
+	Part 1:<br>
+	var z; alert(typeof z);<br>displays undefined in the alert, because z was never assigned a value.<br><br>
+	alert(!!false);<br>displays false, because it first negates false into true, then again back to false.<br><br>
+	alert(7%2);<br>displays 1, the remainder after dividing 7 by 2.<br><br>
+	var name = "Jim"; alert(name + " Smith");<br>displays Jim Smith, the concatenated string.<br><br>
+	var myNum = "5"; alert(myNum+2);<br>displays 52, since the var was of type string so it concatenated instead of adding.<br><br>
+		
+	<br>
+	Part 2:<br>
+	2.1 - Java code needs to be compiled before it can run, and also
+	requires a dedicated environment to write. Javascript on the
+	other hand can just be written in plaintext and run through any 
+	web browser
+	<br>
+	2.2 - the + operator is used for adding 2 objects together, and does different
+	things depending on the types of objects used. with numbers it adds them
+	together, with strings it concatenates them together instead.<br>
+	The ++ operator adds 1 to the variable, if its a number it works, if a string
+	then it breaks it and becomes a NaN.<br>
+	2.3 - window.alert creates a dialog with the passed text, console.log prints the
+	passed text to the console, document.write adds the passed text directly into the document<br>
+	2.4 - the = assigns a the value on the right to the variable on the left.<br>
+	the == operator checks if the value on the left matches the value on the right.<br>
+	the === operator checks that the value and type match of the 2 values.<br>
+	2.5 - a while loop runs until the condition given becomes false.<br>
+	a do-while loop runs once regardless, then functions like a normal while loop.<br>
+	<br><br>
+	Part 3:<br>
+	<script>
+		var name = prompt("Part 3:\nEnter your first name", "Theodor");
+		name = name.toUpperCase();
+		var welcome = "";
+		for (var i=0;i<3;i++){
+			welcome += ("Welcome "+name+"!\n");
+			document.write("Welcome "+name+"!<br>");
+		}
+		alert(welcome);
+	</script>
+</body>
+</html>
