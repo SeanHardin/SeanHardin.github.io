@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MadLib</title>
+		<style>
+			p{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>story time</h1>
+		<!--I am feeling very uncreative today, so this is all the css i can manage.-->
+		<p id="story"></p>
+		<script>
+			var word1 = prompt("adjective", "red");
+			var word2 = prompt("plural noun", "trees");
+			var word3 = prompt("adverb", "quickly");
+			var word4 = prompt("plural noun", "straws");
+			var word5 = prompt("adjective", "weak");
+			var word6 = prompt("plural noun", "toothpicks");
+			var word7 = prompt("type of liquid", "glue");
+			var word8 = prompt("past tense verb", "spit");
+			var word9 = prompt("past tense verb", "yelled");
+			var word10 = prompt("noun", "statue");
+			var word11 = prompt("past tense verb", "complained");
+			var word12 = prompt("noun", "plant");
+			var word13 = prompt("plural noun", "ice cubes");
+			var story = "<p>Once upon a time, there were three little pigs who decided to build" + 
+				"themselves houses.<br> The first pig was " + word1 + ", and he built his house out " +
+				"of " + word2 + ". The second pig worked <br>very " + word3 + ".and built a house out of " +
+				word4 + ". But the third pig was " + word5 + ".<br> He built his house out of " + word6 + 
+				".and " + word7 + ". Then one day a big wolf came along. <br>When he saw the first pig's " + 
+				"house, he " + word8 + " and he " + word9 + " until he blew it down. Then he blew down " + 
+				"<br>the second pig's " + word10 + ". But no matter how hard he complained, he couldn't " + 
+				"blow down the third pig's plants. <br>MORAL: Once the cats come home to " + 
+				"roost, it's too late to whitewash the walls.</p>"
+			document.write(story);
+		</script>
+	</body>
+</html>

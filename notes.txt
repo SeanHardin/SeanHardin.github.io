@@ -198,25 +198,237 @@ list-style-type: none;disc;circle;square;decimal;decimal-leading-zero;lower-alph
 list-style-position: inside;outside; //default is outside
 list-style-image: url(/images/happy.gif);//custom bullets
 
+<table>
+  <tr>//table row
+    <th></th><th></th><th></th>//table header
+  </tr><tr>
+    <td></td><td></td><td></td>//table data
+  </tr>
+</table>
 
+<th colspan="2">//takes up 2 cell width
+<th rowspan="3">//takes up 3 cell height
+  add padding to th or td to increase space between cells
+<caption></caption>//used inside table to give title
+<th scope="row,col,rowgroup,colgroup">//attaches the header to all td for screenreaders
+<th id="idName">...<td headers="idName">//attach header to given cell
+  colgroup - a group of columns
 
+<form action="/mailinglist.php" method="post">
+//action is the file that will process the form, if empty posts on page itself.
+//method is how data gets sent along. post sends to server, get appends to url.
+  <fieldset>
+  //group together forms that are about the same thing
+    <legend>Join our email list???</legend>
+    //a caption of what the fields contain for screenreaders
+    <p>text displayed above the form...</p>
+    <ol>
+      <li><label for="firstlast">Name:</label>
+        <input type="text" name="username" id="firstlast"></li>
+        //name assigns the input to a var with the given name.
+      <li>same deal for email
+    </ol>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
 
+<input type="text" name="name" value="value" maxlength="50">//text is default, for single line of text.
+ name - variable name
+ value - default text
+ maxlength - character limit
 
+<textarea name... rows="5" cols="50">
+ rows - how many visible rows
+ cols - how wide box is
+ wrap="soft,hard" - soft eliminates line breaks, hard keeps them
 
+<input type="password">//shows generic dots instead of typed text
+ type="search,email,tel,url" - basic textboxes, but with semantics browsers can interpret to server differently
 
+<input type="reset">//resets all forms.
 
+<input type="radio" name="sharedNameWithAllOptions" value="textDisplayed">
+ can chain a number of them together like this.
 
+<input type="checkbox" name="sharedNameWithAllOptions" value="yes,no">//value sets default
 
+<select name... size="6" multiple>//size is options shown at once, multiple allows multiple options to be selected at once
+ <option>...</option>
+ <option selected>this option is selected by default</option>
 
+<select...>
+ <optgroup label="labelAboveOptions">
+  <option>...</option>
+  <option>...</option>
+ <optGroup label="label2"...
+...
+</select>
 
+<form action="/client.php" method="POST" enctype="multipart/form-data">
+ <label>descriptive label for file to send<br>
+ <input type="file" name... size...></label>
+</form>
 
+<input type="hidden" ...>//autofill these with relevant data?
 
+input type: all have name and value attributes
+ date - a calendar to click on a day appears - YYYY-MM-DD
+ time - a clock thing that can be set - hh:mm:ss
+ datetime - both appear - YYYY-MM-DDThh:mm:ssTZD
+ datetime-local - no timezone info (no TZD)
+ month - calendar to select whole months - YYYY-MM
+ week - calendar to select whole weeks - YYYY-W#
 
+<input type="number">//only take numbers. min, max can be set
+<input type="range">//slider. min, max, step can be set
+<input type="color">//color selector stores in hex
 
+helping screenreaders with forms:
+ implicit association - next input inside of label
+ explicit association - attach label attribute for="idOfForm"
 
+CSS FOR _____ WILL BE NECESSARY IF YOU WANT TO MAKE THINGS LOOK NICE.
 
+<video src="filepathToVideo" width="640" height="480" poster="pathToImage" controls autoplay>
+ poster - still image to show before video is played
+ controls - allows controls to appear on video
+ loop - loops.
 
+<video id... preload="auto">
+ <source src="file.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+ <source src="file.webm" type='video/webm; codecs="VP8, vorbis"'>
+ <source src="file.ogv" type='video/ogg; codecs="theora, vorbis"'>
+ //flash fallback, kinda dead thoug
+ <object type="application/x-shockwave-flash data="your_flash_player.swf">
+  <param name... value="your_flash_player.swf">
+  <param name...2 value=controlbar=over&amp;image=poster.jpg&amp;file=yourmovie-main.mp4>
+  <img src="poster.jpg" title="no video playback, please download below.>
+ </object>
+</video
+<ul>
+ <li><a href="file.mp4"></a></li>
+ <li><a href="file.ogv"></a></li>
+</ul>
 
+<audio>......same as video but without codecs
+ <source src="file.mp3",ogg,webm type="audio/mp3",ogg,webm>...
+
+<canvas>....
+
+<script>
+ var canvas = document.getElemenyById(canvas);
+ canvas.strokeStyle = "black";//strokes now black
+ canvas.lineWidth=3;//thicker stroke
+ canvas.fillStyle="yellow"//fills now yellow
+ canvas.beginPath();//start tracking movements?
+ canvas.arc(100,100,75,(0,....
+CANVAS.
+ strokeRect(initialx, initialy, endx, endy);//draw rectangle between points
+  0 0 is top left.
+ beginPath();//starts line drawing
+ closePath();//ends line drawing
+ arc(x,y,radius,beginRadians,endRadians);
+  draws arc where x,y is center, radius is radius, and radians indicate the begin and end of arc angle
+ stroke();//draws line defined by the path
+ fill();//fills in path specified
+ fillText(text,x1,y1);//add text to canvas at x,y
+  attributes lineWidth, strokeStyle, fillStyle, font must be set first.
+ 
+JAVSCRIPT
+ alert,confirm,prompt();//dialog boxes
+  prompt(label, default) returns what user enters in text entry.
+ Date()//returns current date and time
+ parseInt("123")//parses string as int
+ setTimeout(function, time in ms)
+window.
+ event - state of an event?
+  onblur - element loses focus
+  onchange - content of form field changes
+  onclick - click
+  onerror - error occurs when document or image loads
+  onfocus - element gets focus
+  onkeydown - keyboard key is pressed
+  onkeypress - keyboard key is pressed or held down
+  onkeyup - key is released
+  onload - page or image finished loading
+  onmousedown - mouse button pressed
+  onmousemove - mouse is moved
+  onmouseout - mouse moved off element
+  onmouseover - mouse moved over element
+  onmouseup - mouse button released
+  onsubmit - submit button clicked on form.
+ history - contains urls user has visited
+ location - read write access to address bar
+ status - sets or returns text in status bar
+ close() - close the current window
+ confirm() - dialog with okay and cancel buttons
+ focus() - sets focus on current window....sounds exploitable.
+
+eventListeners.
+ <body onclick="myFunction();">//runs function when body clicked.
+ window.onclick = function;
+ window.onclick = function(){define function};//only one listener on click
+  window.addEventListener('click', function);//no limit to listeners
+  window.addEventListener('click', function(e){...});
+
+<script src="path.js"></script>
+or just in the tag.
+ IF IN HEAD, RUN BEFORE BODY LOADS.
+ IF BELOW BODY, RUN AFTER BODY LOADS.
+
+ternary operator:
+ condition ? codeIfTrue:codeIfFalse;
+
+array methods/attributes:
+ length - number of elements
+ reverse() - reverse order of items
+ shift() - removes first value of array
+ unshift(newitem1, newItem2) - adds new items to front of array
+ pop() - remove last item
+ push("item1, item2") - add item to end
+ splice(position, number) - cuts array into 2 fro position with number elements
+ slice() - copies the array and returns it
+ indexOf(itemToFind, startingPoint) - returns index of element, -1 if not found
+ join(separator) - turn array into a string with separator between every element.
+
+var types:
+ const - cannot be changed after set
+ let - strict block scoping of variable, redefining will not affect original.
+ if you redefine a variable in a smaller scope, it overwrites the original regardless.
+
+var course = new Object();
+ now i can set course.attributeNames;
+
+shorthand to create objects with attributes and methods: through constructor
+ function Course(parameters){//capitalized to specify that it is an object
+  this.attributeName = param1;
+this.attribute2 = param2;...}
+
+bracket notation:
+ course["title"] works when attribute isn't standard, ie. WP:image
+
+closure - a function inside a function that relies on variables in outer function to work.
+
+display: inline-block - a special display that is inline but allows some css that applies only to block elements.
+
+CSS BOX MODEL:
+ content in center
+ padding between content and border
+ border next
+ margin outside of border
+
+background-image: url("path.jpg");//background of element is now a specific image.
+background-repeat: no-repeat;//blocks repeating of image, repeat-x, repeat-y, repeat
+
+variable names:
+ A-Z, 0-9, _ are valid
+ international chars, $, \, _at start are invalid
+
+% modulus exists.
+
+string.toLowercase();
+
+Math.random()//generates random value between 0 and 1.
 
 
 
