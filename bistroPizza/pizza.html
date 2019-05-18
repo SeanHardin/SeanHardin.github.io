@@ -1,0 +1,92 @@
+<!DOCTYPE html >
+<html>
+<head>
+  <meta charset="utf-8" >
+   <title>Blackstone Bistro: Pizza-on-Demand</title>
+   <style type="text/css">
+      ol, ul { 
+     list-style-type: none;
+      }
+	  li{border: solid 1px black;}
+	  fieldset{
+		background-color:red;
+	  }
+	  legend{
+		background-color:green;
+	  }
+   </style>
+</head>
+
+<body>
+
+<h1>Blackstone Bistro | Pizza-on-Demand</h1>
+
+<p>Our 12" wood-fired pizzas are available for delivery. Build your custom pizza and we'll deliver it within an hour.</p>
+<!--haphazard guessing got me the names for address, email, delivery instructions, and crust. but...
+i would not have ever figured out the rest without seeing the solution's names....-->
+<form action="http://www.blackgoosebistro.com/pizza.php" method="post">
+	
+	<fieldset>
+		<legend>Your Information</legend>
+		<ul>
+		  <li><label><input type="text" name="customername" value="FullName">&nbsp;Name</label></li>
+		  <li><label><input type="text" name="address" value="12345 simpleStreet">&nbsp;Address</label></li>
+		  <li><label><input type="tel" name="telephone" value="12345678990">&nbsp;Telephone Number</label></li>
+		  <li><label><input type="email" name="email" value="example@email.com">&nbsp;Email</label></li>
+		  <li><label><input type="text" name="instructions" value="keep hot.">&nbsp;Delivery instructions</label></li>
+		</ul>
+	</fieldset>
+
+
+	<h2>Design Your Dream Pizza:</h2>
+	<fieldset>
+		<legend>Pizza specs</legend>
+		<fieldset>
+			<legend>Crust <em>(Choose one)</em>:</legend>
+			<ul>
+			  <li><label><input type="radio" name="crust" checked value="Classic white">Classic white</label></li>
+			  <li><label><input type="radio" name="crust" value="Multigrain">Multigrain</label></li>
+			  <li><label><input type="radio" name="crust" value="Cheese-stuffed crust">Cheese-stuffed crust</label></li>
+			  <li><label><input type="radio" name="crust" value="Gluten-free">Gluten-free</label></li>
+			  <li><label><input type="radio" name="crust" value="Cinnamon">Cinnamon</label></li>
+			  <li><label><input type="radio" name="crust" value="Thin-crust">Thin-crust</label></li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>Toppings <em>(Choose as many as you want)</em>:</legend>
+			<ul>
+			  <li><label><input type="checkbox" name="toppings[]" value="Red sauce">Red sauce</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="White sauce">White sauce</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="Mozzarella Cheese">Mozzarella Cheese</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="Pepperoni">Pepperoni</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="Mushrooms">Mushrooms</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="Peppers">Peppers</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="Anchovies">Anchovies</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="Pineapple">Pineapple</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="Jalapenos">Jalapenos</label></li>
+			  <li><label><input type="checkbox" name="toppings[]" value="Popcorn">Popcorn</label></li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>Number</legend>
+			<p>How many pizzas:
+				<Select name="pizzas" size="1">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+				</select>
+			</p>
+		</fieldset>
+	</fieldset>
+	<input type="submit" value="Start Delivery">
+	<input type="reset" value="Reset Everything">
+</form>
+</body>
+</html>
