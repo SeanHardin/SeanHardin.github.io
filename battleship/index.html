@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Battleship</title>
+		<style>
+			.cell{
+				border: 1px solid gray;
+				padding: 5px 8px;
+				margin-bottom: 10px;
+			}
+			.notCell{
+				border: 1px solid lightgray;
+				padding: 5px 8px;
+				text-align: center;
+			}
+			.hit{
+				color: red;
+			}
+			#gameBoard, #gameNumbers{
+				font-family: monospace;
+				margin-bottom: 1em;
+				
+			}
+			#gameNumbers{
+				padding-bottom: 1em;
+			}
+			#status{
+				background-color: gray;
+				color: white;
+				font-size: 1.5em;
+			}
+			h1{
+				font-family: serif;
+			}
+			body{
+				background-image: url(roughSeas.png);
+			}
+			#mainContainer{
+				background-color: lightgray;
+				padding-left: 1.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mainContainer">
+			<h1>Mini Battleship</h1>
+			<div id="gameInfo">
+				<p id="status">
+					The battleship has escaped our scanners, but we know it is here. it is 
+					your task to destroy it and save us all.
+				</p>
+				<p id="shotsLeft">
+					<span id="shots">Shots remaining:</span>
+					<span><input type="text" id="target" name="targetToShoot" value="0" maxlength="2"></span>
+					<span><input type="button" id="shoot" name="fireAtTarget" value="shoot"></span>
+				</p>
+			</div>
+			<div id="gameBoard">
+				<span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><!--
+				--><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><!--
+				--><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><!--
+				--><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><span class="cell">&nbsp;&nbsp;</span><br>
+				
+			</div>
+			<div id="gameNumbers">
+				<span class="notCell">&nbsp;1</span><span class="notCell">&nbsp;2</span><span class="notCell">&nbsp;3</span><span class="notCell">&nbsp;4</span><span class="notCell">&nbsp;5</span><!--
+				--><span class="notCell">&nbsp;6</span><span class="notCell">&nbsp;7</span><span class="notCell">&nbsp;8</span><span class="notCell">&nbsp;9</span><span class="notCell">10</span><!--
+				--><span class="notCell">11</span><span class="notCell">12</span><span class="notCell">13</span><span class="notCell">14</span><span class="notCell">15</span><!--
+				--><span class="notCell">16</span><span class="notCell">17</span><span class="notCell">18</span><span class="notCell">19</span><span class="notCell">20</span>
+			</div>
+		</div>
+		<script src="bs.js"></script>
+	</body>
+</html>
+

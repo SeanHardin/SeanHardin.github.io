@@ -430,6 +430,92 @@ string.toLowercase();
 
 Math.random()//generates random value between 0 and 1.
 
+window.innerWidth //get width
+window.open() //open new tab
+document.getElementById('id');
+document.getElemetsByClassName('class');
+document.querySelector('.main-nav a');//first match//any css selector works here.
+  '.menu .had-children a'//has both classes and is an a
+  '.social-nav a[href*="linkedin.com"]'//idk
+  '.menu li a, .social-nav li a'//selects between two different groupings.
+document.querySelectorAll('same');//all matches
+element.outerHTML //gets the entire element, including both tags.
+element.innerHTML //gets only the text inside element.
+
+element.className //gets or sets classname
+element.classList //gets indexed list of classes, READ ONLY
+element.classList.add("newClassName")//add new class to element.
+element.classList.remove("exitingClassName") //removed existing class from list.
+element.classList.toggle("class") //disables the specified class, can be reenabled.
+element.classList.contains("class") //check if the class exists in the given element.
+
+element.hasAttribute("att")
+element.getAttribute("att")//returns value of attribute
+element.setAttribute('att')//changes value if exists or adds new
+element.removeAttribute('att')//removes.
+console.log(element.attributes)//get namedNodeMap of all applied attributes
+
+document.createElement("tag")//creates element of specified type.
+document.createTextNode(text)//create text node//same as innerHTML
+parent.appendChild(element)//appends child to last child space on parent.
+
+element.style //give all inline styles on element. but no others.
+element.style.color = "green" //color style.
+element.style.backgroundColor = "blue" //bg
+element.style.cssText = "padding: 1em; color: white; background-color: red;"//set style directly, overwrites
+element.style.setAttribute("style","padding: 2em")//overwrites
+
+
+var random = Math.random() //gets random value [0,1)
+Math.floor(double)//rounds down.
+parseInt("numToParse","base")
+
+var obj = {attributeName:"stringValue", numValue:9}
+native objects:Date,Array,functions,Number,String,Object
+host objects:HTMLElement,images,forms, browser html stuff.
+user defined objects:var car = {};
+{}//object literal.
+new Object()//constructor
+for traversing all keys in an object:
+ for(var key in object){//will run for every attribute in object}
+
+TO MAKE BUTTONS LISTEN:
+ give button unique id
+ in js file, var btn = doc.getbyid('id'); function game(){}
+  btn.onclick = game;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
