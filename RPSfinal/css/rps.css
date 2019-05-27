@@ -1,0 +1,37 @@
+#gameScreen, #gameOver{
+	display: none;
+}
+#startScreen img{
+	float: right;
+}
+#status{
+	background-color: rgb(225, 182, 243);
+}
+header, h2, #status p{
+	text-align: center;
+}
+header{
+	background-color: rgb(185, 222, 203);
+	margin-top: 0px;
+	padding-top: 0px;
+	border-top: 0px;
+}
+body > div{
+	padding: 0em 20em;
+}
+body{
+	background-color: pink;
+}
+div img{
+	display: inline;
+}
+div div{
+	background-color: rgb(245, 212, 223);
+}
+div > img{
+	border: 2px solid gray;
+}
+#ty{
+	font-size: 5em;
+	background-color:lightblue;
+}

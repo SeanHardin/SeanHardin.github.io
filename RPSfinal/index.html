@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+	<!--Sean Hardin, both html and css validated with no errors or warnings.-->
 	<head>
 		<meta charset="utf-8">
 		<title>Rock Paper Scissors</title>
-		<link rel='stylesheet' href='rps.css'>
+		<link rel='stylesheet' href='css/rps.css'>
 	</head>
 	<body>
-		
-		<script src="rps.js"></script>
+	<!--note on image naming: first character is r for rock, p for paper, s for scissors.
+	second character is h for hover, s for selected, blank for neutral-->
+		<header>
+			<h1>Rock/Paper/Scissors</h1>
+			<p>The time tested method of settling conflicts since you were a kid</p>
+		</header>
+		<div id="startScreen">
+			<h2>Rules</h2>
+			<img src="img/rps.png" alt="rock beats scissors, paper beats rock, scissors beats paper.">
+			<p>The rules of Rock Paper Scissors are simple: you choose one of the three hands and your opponent 
+			chooses theirs, at which point you show each other at the same time and the winner is determined
+			by whichever player's hand wins against the other. If both hands are the same then its a tie and nobody gets a point.</p>
+			<p>In short:<br>Paper beats rock<br>Rock beats scissors<br>Scissors beats paper<br>Nothing wins in a draw</p>
+			<input type="button" id="startButton" value="START PLAYING!">
+		</div>
+		<div id="gameScreen">
+			<p><strong>Click on one of these three images to make your move:</strong></p>
+			<div>
+				<img id="rock" src="img/r.png" alt="rock">
+				<img id="paper" src="img/p.png" alt="paper">
+				<img id="scissors" src="img/s.png" alt="scissors">
+			</div>
+			<div id="status">
+				<h2 id="round">Round 1</h2>
+				<p id="player">Player chose:</p>
+				<p id="computer">Computer chose:</p>
+				<p id="winner">Waiting for selection</p>
+				<p id="score"><span>Player: 0 &nbsp;&nbsp;&nbsp;</span><span>Computer: 0 &nbsp;&nbsp;&nbsp;</span><span>Draws: 0</span></p>
+			</div>
+			<div>
+				<img id="crock" src="img/r.png" alt="crock">
+				<img id="cpaper" src="img/p.png" alt="cpaper">
+				<img id="cscissors" src="img/s.png" alt="cscissors">
+			</div>
+			
+			
+			COMMENT YOUR CODE~~~including my name.
+			must pass w3c
+		</div>
+		<div id="gameOver">
+			<h2 id="endMsg">&nbsp;</h2>
+			<h2 id="ty">Thanks for playing!</h2>
+		</div>
+		<script src="js/rps.js"></script>
 	</body>
 </html>
