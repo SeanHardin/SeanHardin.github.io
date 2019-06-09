@@ -53,7 +53,7 @@ function guess(){
 	guessNumber++;
 	guessLocation = guessInput.value;
 	//validating the input
-	if (isNaN(guessLocation) || guessLocation < 0 || guessLocation > htmlCells.length){
+	if (isNaN(guessLocation) || guessLocation < 1 || guessLocation > htmlCells.length){
 		updateStatus("Invalid input. input a number between 1 and " + htmlCells.length + " and try again.");
 	} else {
 		//input is valid, checking with stored location.
