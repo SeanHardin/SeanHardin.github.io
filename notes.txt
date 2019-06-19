@@ -484,8 +484,48 @@ TO MAKE BUTTONS LISTEN:
  in js file, var btn = doc.getbyid('id'); function game(){}
   btn.onclick = game;
 
+string.toUpperCase();
+array.push, pop();
+let o = {left:1,right:2}; delete o.left;//o.left == undefined;
+('attributeName' in o) checks if o contains a value at o.attributeName
+Object.keys(o)//returns array of all attibuteNames o has
+let o = {a:1,b:2}; Object.assign(o, {b:3,c:4});//o == {a:1,b:3,c:4}
+array.indexOf(val, startIndex)
+array.lastIndexOf(val, startIndex)
+array.slice(inclusiveStartIndex, exclusiveEndIndex);//returns subsection
+array.concat(array2)//returns array containing both arrays as one.
+string.indexOf(substring)//return startIndex of substring.
+string.trim()//removes extra space
+String(6).padStart(numChars, char)//starts string with numChars of the letter char.
+string.split(delimiter)//splits into array of strings
+array.join(delimiter)//joins together elements as single string with delimiter between them.
+string.repeat(n)returns string repeated n times.
 
+limitless parameters: function name(...theRest){for (let number in theRest)//doStuff};//... is special syntax for infinite parameters.
+  binds all parameters into an array that gets passed in.
+name(...theRest);//pass array as n separate parameters?  
+//this is interesting and needs testing...
 
+Math.
+ max
+ min
+ floor
+ sqrt
+ sin
+ cos
+ tan
+ asin
+ acos
+ atan
+ PI;
+ random
+ ceil
+ round
+ abs//absolute value
+
+array = Array.from(Object)//turns obj into array if possible.
+
+element.addEventListener("click", functionName, false)//boolean affects the bubbling..?
 
 
 

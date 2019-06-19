@@ -10,6 +10,15 @@ function startGame(){
 }
 document.getElementById("startButton").onclick = startGame;
 
+//caching images after setting up first button, for a hopefully seamless load
+var imageListNames = ["img/p.png","img/ph.png","img/ps.png","img/r.png","img/rh.png","img/rs.png","img/s.png","img/sh.png","img/ss.png"];
+var imageList = [];
+for (var i=0;i<imageListNames.length;i++){
+	var img = new Image();
+	imageList.push(img);
+	img.src = imageListNames[i];
+}
+
 //these elements see a lot of use, so initializing them early.
 var rockImg = document.getElementById("rock");
 var paperImg = document.getElementById("paper");
